@@ -1,0 +1,7 @@
+name: YouMayNowJoin
+main: YMNJ\Main
+version: 1.0.0
+api: 2.0.0
+load: POSTWORLD
+author: TheDeibo
+description: Cancels Disconnection events
