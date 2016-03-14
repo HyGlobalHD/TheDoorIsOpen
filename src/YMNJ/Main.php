@@ -1,5 +1,5 @@
 <?php
-namespace YMNJ;
+namespace TDIO;
 	
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
@@ -9,7 +9,7 @@ class Main extends PluginBase implements Listener{
     public function onLoad() {
         $this->getServer()->getLogger()->info("");
         $this->getServer()->getLogger()->info("");
-    	$this->getLogger()->info(TextFormat::LIGHT_PURPLE . "YouMayNowLoad.... I mean Join!.");
+    	$this->getLogger()->info(TextFormat::LIGHT_PURPLE . "TheDoorIsOpen!.");
     	$this->getServer()->getLogger()->info("");
         $this->getServer()->getLogger()->info("");
     }
@@ -17,20 +17,20 @@ class Main extends PluginBase implements Listener{
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         $this->getServer()->getLogger()->info("");
         $this->getServer()->getLogger()->info("");
-        $this->getLogger()->info(TextFormat::LIGHT_PURPLE . "YouMayNowJoin Is Enabled.");
+        $this->getLogger()->info(TextFormat::LIGHT_PURPLE . "TheDoorIsOpen Is Enabled.");
         $this->getServer()->getLogger()->info("");
         $this->getServer()->getLogger()->info("");
     }
     public function onPlayerKick(PlayerKick $event){
         if($event->getReason() === "disconnectionScreen.serverFull"){
             $event->setCancelled(true);
-            $this->getLogger()->info(TextFormat::LIGHT_PURPLE . "YouMayMowJoin has been successfully activated.");
+            $this->getLogger()->info(TextFormat::LIGHT_PURPLE . "TheDoorIsOpen has been successfully activated.");
         }
     }
     public function onDisable(){
     	$this->getServer()->getLogger()->info("");
         $this->getServer()->getLogger()->info("");
-        $this->getLogger()->info(TextFormat::LIGHT_PURPLE . "YouMayNowJoin has been disabled. Thanks for using YouMayNowJoin.");
+        $this->getLogger()->info(TextFormat::LIGHT_PURPLE . "TheDoorIsOpen has been disabled. Thanks for using TheDoorIsOpen.");
         $this->getServer()->getLogger()->info("");
         $this->getServer()->getLogger()->info("");
     }
